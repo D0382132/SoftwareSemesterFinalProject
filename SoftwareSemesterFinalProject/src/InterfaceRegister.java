@@ -1,17 +1,16 @@
 import java.awt.EventQueue;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import java.awt.BorderLayout;
-import javax.swing.JTextField;
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JTextField;
 
-public class InterfaceMain {
+public class InterfaceRegister {
 
 	private JFrame frame;
 	private JTextField textFieldAccount;
 	private JTextField textFieldPassword;
+	private JTextField textFieldPasswordAgain;
 
 	/**
 	 * Launch the application.
@@ -20,7 +19,7 @@ public class InterfaceMain {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					InterfaceMain window = new InterfaceMain();
+					InterfaceRegister window = new InterfaceRegister();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -32,7 +31,7 @@ public class InterfaceMain {
 	/**
 	 * Create the application.
 	 */
-	public InterfaceMain() {
+	public InterfaceRegister() {
 		initialize();
 	}
 
@@ -54,10 +53,10 @@ public class InterfaceMain {
 		textFieldPassword.setBounds(140, 140, 150, 25);
 		frame.getContentPane().add(textFieldPassword);
 		textFieldPassword.setColumns(10);
-		
-		JButton btnNewButtonSignIn = new JButton("\u767B\u5165");
-		btnNewButtonSignIn.setBounds(160, 193, 99, 27);
-		frame.getContentPane().add(btnNewButtonSignIn);
+
+		JButton btnNewButtonRegister = new JButton("\u8A3B\u518A");
+		btnNewButtonRegister.setBounds(170, 228, 99, 27);
+		frame.getContentPane().add(btnNewButtonRegister);
 		
 		JLabel lblNewLabelAccount = new JLabel("\u5E33\u865F");
 		lblNewLabelAccount.setBounds(57, 90, 57, 19);
@@ -71,12 +70,15 @@ public class InterfaceMain {
 		labelTop.setBounds(136, 55, 147, 19);
 		frame.getContentPane().add(labelTop);
 		
-		JLabel labelQuestionNoAccount = new JLabel("\u6C92\u6709\u5E33\u865F\u55CE?");
-		labelQuestionNoAccount.setBounds(170, 233, 89, 19);
-		frame.getContentPane().add(labelQuestionNoAccount);
+		textFieldPasswordAgain = new JTextField();
+		textFieldPasswordAgain.setBounds(140, 190, 150, 25);
+		frame.getContentPane().add(textFieldPasswordAgain);
+		textFieldPasswordAgain.setColumns(10);
 		
-		JButton btnNewButtonRegister = new JButton("\u8A3B\u518A");
-		btnNewButtonRegister.setBounds(160, 276, 99, 27);
-		frame.getContentPane().add(btnNewButtonRegister);
+		JLabel lblNewLabelPasswordAgain = new JLabel("\u518D\u6B21\u8F38\u5165\u5BC6\u78BC");
+		lblNewLabelPasswordAgain.setBounds(37, 193, 99, 19);
+		frame.getContentPane().add(lblNewLabelPasswordAgain);
+		
 	}
+
 }
