@@ -9,6 +9,7 @@ import java.io.FileReader;
 import java.util.ArrayList;
 
 
+
 public class FileProcess 
 {
 	private ArrayList<String> memberLoadData;
