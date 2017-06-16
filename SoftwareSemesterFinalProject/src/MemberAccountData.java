@@ -10,13 +10,6 @@ public class MemberAccountData
 	private String password;
 	private int point;
 	
-	/*public boolean creatAccount(String inputAccount , String inputPassword )
-	{
-		this.account = new String(inputAccount);
-		this.password = new String(inputPassword);
-		this.point = 0;
-		
-	}*/
 	public boolean compareAccount (String inputAccount)
 	{
 		boolean returnValue;
